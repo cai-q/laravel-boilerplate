@@ -23,6 +23,7 @@ $factory->define(User::class, function (Generator $faker) {
         'account' => $faker->userName,
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
+        'api_token' => str_random(32),
         'remember_token' => str_random(10),
     ];
 });
