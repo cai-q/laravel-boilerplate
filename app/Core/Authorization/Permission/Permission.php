@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
 class Permission extends Model
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|Role
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|Role[]
      */
     public function roles()
     {

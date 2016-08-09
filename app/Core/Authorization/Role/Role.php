@@ -30,7 +30,7 @@ class Role extends Model
     use RoleHasPermission;
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|User
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|User[]
      */
     public function users()
     {

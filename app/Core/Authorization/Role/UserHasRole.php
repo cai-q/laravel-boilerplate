@@ -18,7 +18,7 @@ trait UserHasRole
 {
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|Role
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|Role[]
      */
     public function roles()
     {

@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Builder;
 trait RoleHasPermission
 {
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|Permission
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany|Builder|Permission[]
      */
     public function permissions()
     {
