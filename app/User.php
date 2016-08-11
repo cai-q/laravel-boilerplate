@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Core\Authentication\Wechat\IsWechatUser;
 use App\Core\Authorization\Role\UserHasRole;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,11 +29,20 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Query\Builder|\App\User whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string $openid
+ * @property string $unionid
+ * @property string $api_token
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Illuminate\Notifications\DatabaseNotification[] $unreadNotifications
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereOpenid($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereUnionid($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereApiToken($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User openID($openID)
  */
 class User extends Authenticatable
 {
     use Notifiable;
     use UserHasRole;
+    use IsWechatUser;
 
     /**
      * The attributes that are mass assignable.

@@ -22,6 +22,8 @@ $factory->define(User::class, function (Generator $faker) {
         'name' => $faker->name,
         'account' => $faker->userName,
         'email' => $faker->safeEmail,
+        'openid' => $faker->sha1,
+        'unionid' => $faker->optional()->sha1,
         'password' => bcrypt(str_random(10)),
         'api_token' => str_random(32),
         'remember_token' => str_random(10),
@@ -30,14 +32,14 @@ $factory->define(User::class, function (Generator $faker) {
 
 $factory->define(Role::class, function(Generator $faker) {
     return [
-        'name' => $faker->unique()->word,
-        'label' => $faker->word,
+        'name' => $faker->unique()->sentence(2),
+        'label' => $faker->sentence,
     ];
 });
 
 $factory->define(Permission::class, function(Generator $faker) {
     return [
-        'name' => $faker->unique()->word,
-        'label' => $faker->word,
+        'name' => $faker->unique()->sentence(2),
+        'label' => $faker->sentence,
     ];
 });

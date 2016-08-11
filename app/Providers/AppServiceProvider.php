@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Core\Authorization\Role\Administrator;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
