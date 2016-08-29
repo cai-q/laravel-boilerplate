@@ -8,6 +8,8 @@ use Illuminate\Support\ServiceProvider;
 
 class WechatServiceProvider extends ServiceProvider
 {
+    protected $defer = true;
+
     /**
      * Bootstrap the application services.
      *
