@@ -8,8 +8,9 @@ php:
 
 before_script:
   - composer install --dev --prefer-source --no-interaction
-  - mysql -e 'create database laravel-boilerplate;'
   - cp .env.travis .env
+  - mysql -e 'CREATE DATABASE `laravel-boilerplate`;'
+  - php artisan migrate
 
 script: phpunit
 
