@@ -12,7 +12,8 @@
         "overtrue/laravel-lang": "^3.0",
         "erusev/parsedown": "^1.6",
         "michelf/php-markdown": "^1.6",
-        "overtrue/wechat": "~3.1"
+        "overtrue/wechat": "~3.1",
+        "laravel/passport": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

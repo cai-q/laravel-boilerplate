@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
+Route::get('/user', function (User $user,  Request $request) {
     return $request->user();
 });

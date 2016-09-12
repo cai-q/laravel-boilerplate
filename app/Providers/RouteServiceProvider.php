@@ -56,8 +56,6 @@ class RouteServiceProvider extends ServiceProvider
             'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
-            require base_path('routes/web.php');
-
             $files = Finder::create()->in(base_path('routes/web'))->name('*.php');
             foreach ($files as $file) {
                 require $file->getRealPath();
@@ -79,8 +77,6 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace,
             'prefix' => 'api',
         ], function ($router) {
-            require base_path('routes/api.php');
-
             $files = Finder::create()->in(base_path('routes/api'))->name('*.php');
             foreach ($files as $file) {
                 require $file->getRealPath();

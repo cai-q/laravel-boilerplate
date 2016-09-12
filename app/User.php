@@ -6,6 +6,7 @@ use App\Core\Authentication\Wechat\IsWechatUser;
 use App\Core\Authorization\Role\UserHasRole;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Passport\HasApiTokens;
 
 /**
  * App\User
@@ -43,6 +44,7 @@ class User extends Authenticatable
     use Notifiable;
     use UserHasRole;
     use IsWechatUser;
+    use HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
